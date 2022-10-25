@@ -10,7 +10,7 @@ The Pd console
 When opening Pd you will see Pd's console window first.
 This is where important debugging and other messages will be reported by Pd's internal and external objects.
 
-.. image:: /images/pdconsole.png
+.. image:: ../images/pdconsole.png
     :width: 400
 
 A new patch
@@ -26,7 +26,7 @@ To start a new patch, you either click the menu entry **File / New **, or use th
 
 Another window will appear:
 
-.. image:: /images/emptypatch.png
+.. image:: ../images/emptypatch.png
     :width: 400
 
 This window is called a *patch* and sometimes *canvas*. Within this window (and probably many others) you will make your patches.
@@ -82,7 +82,7 @@ The last thing you need to know is that you can interact with Pd in two ways:
 
 You can toggle between these with the **Edit Mode** switch, either from the menu entry **File / Edit Mode** or (recommended) via the shortcut: ``Ctrl + E``
 
-.. image:: /images/editmode.png
+.. image:: ../images/editmode.png
     :width: 400
 
 1. When **Edit mode** is turned **ON** you can edit your patches, create objects, edit text, connect boxes, etc.
@@ -108,7 +108,7 @@ A sinewave in 10 easy steps (no mouse involved)
 
 If you followed everything *to-the-letter*, you should have:
 
-.. image:: /images/sine_recipe.png
+.. image:: ../images/sine_recipe.png
     :width: 200
 
 Turning ON the DSP

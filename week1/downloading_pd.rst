@@ -25,22 +25,22 @@ There are two ways to configure Audio in Pd:
 
 -  **File / Preferences / Audio...**
 
-.. image:: /images/1.0.1.captura-windows-1.jpeg
+.. image:: ../images/1.0.1.captura-windows-1.jpeg
     :width: 400
 
 -  or **Media / Audio Settings...**
 
-.. image:: /images/1.0.2.captura-windows-2.jpeg
+.. image:: ../images/1.0.2.captura-windows-2.jpeg
     :width: 400
 
 - ...also (macos only) **Pd / Preferences / Audio...**
 
-.. image:: /images/1.0.3.captura-mac.png
+.. image:: ../images/1.0.3.captura-mac.png
     :width: 400
 
 The following window will open:
 
-.. image:: /images/1.0.4.captura-audio-prefs.png
+.. image:: ../images/1.0.4.captura-audio-prefs.png
     :width: 400
     :caption: Pd's Audio Settings window
 
@@ -57,13 +57,13 @@ This is where we test that our audio is working for Pd.
 
 Go to **Media / Test Audio and MIDI...**
 
-.. image:: /images/1.0.6.test-a-midi.png
+.. image:: ../images/1.0.6.test-a-midi.png
     :width: 400
     :caption: Menu entry to open Test Audio and MIDI
 
 The following window will open:
 
-.. image:: /images/1.0.5.mac-testtone.png
+.. image:: ../images/1.0.5.mac-testtone.png
     :width: 400
     :caption: Test Audio and MIDI Screenshot
 

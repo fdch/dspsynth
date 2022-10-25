@@ -5,7 +5,7 @@ The Sinusoid
 `week1 </week1>`_ `prev </week1/about.html>`_ `next </week1/using_pd.html>`_
 
 
-.. image:: /images/sinusoid.png
+.. image:: ../images/sinusoid.png
     :width: 400
 
 Why Sinusoids?
@@ -49,7 +49,7 @@ The sine function
 
 Given that the sinewave is an example of an audio signal, we need to find a function we can use. Luckily for us, we can make use of our trigonometry chops to use the `sine <https://en.wikipedia.org/wiki/Sine_and_cosine>`_ function. 
 
-.. image:: /images/trigonometry.png
+.. image:: ../images/trigonometry.png
     :width: 400
 
 We can use the ``sin`` function in place of the ``f`` function above and it will give us the sine wave:
@@ -73,7 +73,7 @@ Where:
     - ``ω`` angular **frequency**
     - ``ø`` **phase** (we can ignore this one for now)
 
-.. image:: /images/sinusoid.png
+.. image:: ../images/sinusoid.png
     :width: 400
 
 ----
@@ -81,7 +81,7 @@ Where:
 How to make a sinweave in Pd
 ============================
 
-.. image:: /images/sinewave_in_pd.png
+.. image:: ../images/sinewave_in_pd.png
     :width: 400
 
 This patch is real, open it with Pd `here <sinewave.pd>`_.

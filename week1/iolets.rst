@@ -17,7 +17,7 @@ The left-most inlet is known as the **hot inlet** because whenever it receives a
 
 In the case of the ``print`` object, which has one outlet, the message is immediately sent to (and therefore printed on) the Pd console.
 
-.. image:: /images/helloworld.png
+.. image:: ../images/helloworld.png
     :width: 700
 
 However, certain objects have multiple inlets.
@@ -27,7 +27,7 @@ This is why the rest of the inlets are called **cold inlets**.
 
 A group of objects that show this behavior is the ``binary`` operators for math operations like: ``+, -, *, /``
 
-.. image:: /images/hotcold.png
+.. image:: ../images/hotcold.png
     :width: 300
 
 As such, when you change the right-most number box which is connected to the cold inlet, nothing happens visually. But, when you change the left-most number box connected to the hot inlet, a number is displayed on the bottom number box.
@@ -43,7 +43,7 @@ There are objects with multiple outlets.
 
 The way Pd outputs its messages to multiple outputs is from **right to left.**
 
-.. image:: /images/order.png
+.. image:: ../images/order.png
     :width: 300
 
 

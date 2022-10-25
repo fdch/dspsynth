@@ -2,7 +2,7 @@
 Digital Signal Processing Techniques
 ====================================
 
-.. image:: /images/dsptech.jpg
+.. image:: ./images/dsptech.jpg
     :width: 400
 
 ----
@@ -116,7 +116,7 @@ The main thing is to find something that you'd really like to do and then do it.
 
 Hope you enjoy the class!
 
-.. image:: /images/dsp2.jpg
+.. image:: ./images/dsp2.jpg
     :width: 400
 
 ----
