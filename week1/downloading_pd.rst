@@ -4,7 +4,7 @@ Downloading Pd
 
 `week1 ..<..>`_ `next <../week1/why_pd.html>`_
 
-| To download Pd, head to https://msp.ucsd.edu/software.htm and **be sure to click on the link for your platform**. The current version as of now is **Pd-0.53-0**.
+| To download Pd, head to http://msp.ucsd.edu/software.htm and **be sure to click on the link for your platform**. The current version as of now is **Pd-0.53-0**.
 
 - Windows:
     You can click on the *automatic installer* option. 
