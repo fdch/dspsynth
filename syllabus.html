@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Syllabus</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="/style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Syllabus</h1>
+</header>
+<p>Class: Digital Synthesis Techniques</p>
+<p>Term: Summer 2023</p>
+<p>Instructor: Fede Camara Halac</p>
+<hr />
+<dl class="incremental">
+<dt>04.04.23 <a href="week1">week1</a> - Pure Data Basics</dt>
+<dd>
+<p>Intro to the class. Installing pd. Configuring Pd. Making and saving
+a patch. The 5 objects in pd: object, message, number, symbol, comment.
+The sinusoid. Order of execution. Hot and Cold inlets. Simple math
+exercises. Pd objects: <code>unpack</code>, <code>trigger</code>,
+<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>,
+<code>print</code></p>
+</dd>
+</dl>
+<hr />
+<dl class="incremental">
+<dt>11.04.23 <a href="week2">week2</a> - The Digital Signal</dt>
+<dd>
+<p>The sample. Sample rate. Nyquist. Aliasing. Differences between audio
+and control signals. Pd objects: <code>osc~</code>, <code>dac~</code>,
+<code>adc~</code></p>
+</dd>
+</dl>
+<hr />
+<dl class="incremental">
+<dt>18.04.23 <a href="week3">week3</a> - Frequency and Amplitude</dt>
+<dd>
+<p>Frequency and amplitude control. Pitch-frequency relation: MIDI /
+Herz (Hz) Dynamics-amplitude relation: Decibels (dB) / RMS amplitude The
+famous "click" sound: signal discontinuities. Pd objects:
+<code>line~</code>, <code>line</code>, <code>mtof</code>,
+<code>ftom</code>, <code>dbtorms</code>, <code>rmstodb</code></p>
+</dd>
+</dl>
+<hr />
+<dl class="incremental">
+<dt>25.04.23 <a href="week4">week4</a> - Wavetable Synthesis</dt>
+<dd>
+<p>classic waveshapes: sawtooth, cosine, triangle, square Reading from /
+writing to arrays Pd objects: <code>tabosc4~</code>,
+<code>phasor~</code>, <code>clip~</code>, <code>abs~</code>,
+<code>wrap~</code>, <code>array</code></p>
+</dd>
+</dl>
+<hr />
+<dl class="incremental">
+<dt>02.05.23 <a href="week5">week5</a> - Sequencing and Envelopes</dt>
+<dd>
+<p>How to make a counter. How to make a sequencer. ADSR envelopes
+Subpatches and abstractions Pd objects: <code>metro</code>,
+<code>sel</code>, <code>float</code>, <code>bng</code>,
+<code>tgl</code>, <code>sliders</code>, <code>del</code></p>
+</dd>
+</dl>
+<hr />
+<dl class="incremental">
+<dt>09.05.23 <a href="week6">week6</a> - Filters and Sustractive
+Synthesis</dt>
+<dd>
+<p>Different configurations: series, parallel, combined Substractive
+synthesis basics: VCF <em>Preparing for midterm</em> Pd objects:
+<code>hp~</code>, <code>lop~</code>, <code>bp~</code>,
+<code>noise~</code>, <code>vcf~</code></p>
+</dd>
+</dl>
+<hr />
+<dl class="incremental">
+<dt>16.05.23 <a href="week7">week7</a> - Interfacing with MIDI</dt>
+<dd>
+<p><em>Preparing for midterm</em> B.Y.O.C. (bring your own controller if
+you have one) Connecting and using a MIDI controller/keyboard Voice
+management and polyphony Pd objects: <code>send</code>,
+<code>receive</code>, <code>notein</code>, <code>noteout</code>,
+<code>makenote</code>, <code>clone</code>, <code>poly</code></p>
+</dd>
+</dl>
+<hr />
+<dl class="incremental">
+<dt>23.05.23 <a href="week8">week8</a>- Class midterm presentations</dt>
+<dd>
+<p>Midterm: make a sustractive synthesizer</p>
+</dd>
+</dl>
+<hr />
+<dl class="incremental">
+<dt>30.05.23 <a href="week9">week9</a> - Granular Synthesis</dt>
+<dd>
+<p>Loading wav files Reading wav files Writing wav files Basic granular
+synthesis Pd objects: <code>soundfiler</code>, <code>tabread4~</code>,
+<code>tabplay~</code></p>
+</dd>
+</dl>
+<hr />
+<dl class="incremental">
+<dt>06.06.23 <a href="week10">week10</a> - More Synthesis
+Techniques</dt>
+<dd>
+<p>Classic synthesis spectra: Amplitud modulation. Frecuency modulation
+(FM synthesis). Phase modulation. Ring modulation Waveshaping. Chebychev
+polynomials Pd objects: <code>cos~</code></p>
+</dd>
+</dl>
+<hr />
+<dl class="incremental">
+<dt>13.06.23 <a href="week11">week11</a> - Delay Networks</dt>
+<dd>
+<p>Recirculating Delay Networks. Variable delays. Algoritmo
+Karplus-Strong. Pitch shifting Echo and Reverb Pd objects:
+<code>rev3~</code>, <code>delwrite~</code>, <code>delread~</code>,
+<code>delread4~</code></p>
+</dd>
+</dl>
+<hr />
+<dl class="incremental">
+<dt>20.06.23 <a href="week12">week12</a> - Signal Analysis</dt>
+<dd>
+<p>Basic Fourier Transform concepts. Signal Analysis. Spectrum.
+Partials. Amplitude analysis. Pd objects: <code>env~</code>,
+<code>sigmund~</code>, <code>bonk~</code>, <code>rifft~</code>,
+<code>rfft~</code></p>
+</dd>
+</dl>
+<hr />
+<dl class="incremental">
+<dt>27.06.23 <a href="week13">week13</a> - Guest presentation</dt>
+<dd>
+<p>TBD</p>
+</dd>
+</dl>
+<hr />
+<dl class="incremental">
+<dt>04.07.23 <a href="week14">week14</a> - Noises and space</dt>
+<dd>
+<p>Randomness. Probability. Walks and Markov Chains. Stereo panning.
+Equal-amplitude panning. Point-source localization. Quadraphonic
+panning. Multichannel signals. Pd objects: <code>noise~</code>,
+<code>mod</code>, <code>random</code>, <code>moses</code></p>
+</dd>
+</dl>
+<hr />
+<dl class="incremental">
+<dt>11.07.23 <a href="week15">week15</a> - Final projects
+presentation</dt>
+<dd>
+<p>Final project: <strong>design and make a sonic experience using Pd
+and some techniques shown in this seminar</strong></p>
+<p>This is our last meeting of the semester, so let's have some vegan
+gluten-free pizza and enjoy each other's sonic explorations!</p>
+</dd>
+</dl>
+<hr />
+</body>
+</html>

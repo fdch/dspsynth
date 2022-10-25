@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Downloading Pd</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="/style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Downloading Pd</h1>
+</header>
+<p><a href="/week1">week1</a> <a href="/week1/why_pd.html">next</a></p>
+<div class="line-block">To download Pd, head to <a
+href="https://msp.ucsd.edu/software.htm">https://msp.ucsd.edu/software.htm</a>
+and <strong>be sure to click on the link for your platform</strong>. The
+current version as of now is <strong>Pd-0.53-0</strong>.</div>
+<ul class="incremental">
+<li><dl class="incremental">
+<dt>Windows:</dt>
+<dd>
+<p>You can click on the <em>automatic installer</em> option.</p>
+</dd>
+</dl></li>
+<li><dl class="incremental">
+<dt>Macos:</dt>
+<dd>
+<p>The usual thing to do is download, double-click on the <em>.dmg</em>
+file, and move to the Applications folder.</p>
+</dd>
+</dl></li>
+<li><dl class="incremental">
+<dt>Linux:</dt>
+<dd>
+<dl class="incremental">
+<dt>There are debian distros, and others, so you can go</dt>
+<dd>
+<p><code>apt-get install puredata</code></p>
+</dd>
+</dl>
+</dd>
+</dl></li>
+</ul>
+<hr />
+<h1 id="pds-audio-settings">Pd's Audio Settings</h1>
+<p>First of all, open Pd by double-clicking on the Pure Data executable
+or app file.</p>
+<p>There are two ways to configure Audio in Pd:</p>
+<ul class="incremental">
+<li><strong>File / Preferences / Audio...</strong></li>
+</ul>
+<p><img src="/images/1.0.1.captura-windows-1.jpeg" width="400"
+alt="image" /></p>
+<ul class="incremental">
+<li>or <strong>Media / Audio Settings...</strong></li>
+</ul>
+<p><img src="/images/1.0.2.captura-windows-2.jpeg" width="400"
+alt="image" /></p>
+<ul class="incremental">
+<li>...also (macos only) <strong>Pd / Preferences /
+Audio...</strong></li>
+</ul>
+<p><img src="/images/1.0.3.captura-mac.png" width="400"
+alt="image" /></p>
+<p>The following window will open:</p>
+<p><img src="/images/1.0.4.captura-audio-prefs.png" width="400"
+alt="image" /></p>
+<p><strong>Make sure that the correct Input and Output devices are
+selected</strong></p>
+<blockquote>
+<p>Also, take note of the <em>Delay (msec)</em> parameter.</p>
+</blockquote>
+<hr />
+<h1 id="test-audio-and-midi">Test Audio and MIDI</h1>
+<p>This is where we test that our audio is working for Pd.</p>
+<p>Go to <strong>Media / Test Audio and MIDI...</strong></p>
+<p><img src="/images/1.0.6.test-a-midi.png" width="400"
+alt="image" /></p>
+<p>The following window will open:</p>
+<p><img src="/images/1.0.5.mac-testtone.png" width="400"
+alt="image" /></p>
+<p>Click on "80" to listen to a test-tone playing at 440 Hz.</p>
+<blockquote>
+<p>You can also check your Audio Input levels corresponding to each
+channel. And you can toggle the Audio Output channels ON or OFF by
+clicking on the boxes.</p>
+</blockquote>
+<hr />
+<h1 id="audio-troubleshooting">Audio Troubleshooting</h1>
+<p>If there is no sound, then</p>
+<ol class="incremental" type="1">
+<li><dl class="incremental">
+<dt>Check the obvius:</dt>
+<dd>
+<ul class="incremental">
+<li>Sound volumes are UP</li>
+<li>Headphones are plugged-in, etc.</li>
+</ul>
+</dd>
+</dl></li>
+<li><dl class="incremental">
+<dt>Make sure you:</dt>
+<dd>
+<ul class="incremental">
+<li>selected the correct Audio Device in <a
+href="#pds-audio-settings">Pd's Audio Settings</a></li>
+<li>connected the Audio Device if it is periferal, or</li>
+<li>set the in/out channels in <a href="#pds-audio-settings">Pd's Audio
+Settings</a> to match your device's.</li>
+</ul>
+</dd>
+</dl></li>
+</ol>
+<p>If you hear <em>clicks</em> or <em>pops</em>, then</p>
+<ul class="incremental">
+<li><p>In <a href="#pds-audio-settings">Pd's Audio Settings</a>, set the
+<em>Delay (msec)</em> parameter higher.</p>
+<blockquote>
+<p>In general, this should not be above <code>50</code>
+milliseconds.</p>
+</blockquote></li>
+<li><p>(Windows only): make sure <span class="title-ref">MMIO</span> is
+<strong>not</strong> selected. Be sure to use ASIO.</p>
+<blockquote>
+<p>Nowadays most audio interfaces have ASIO, so you don't need to worry
+about that: just select ASIO and your interface will be connected.
+However, if you don't have an interface, one solution is to download the
+latest ASIO4ALL driver (<a
+href="https://www.asio4all.org">https://www.asio4all.org</a>), install
+it, re-open Pd, and select <code>ASIO (portaudio)</code> from the
+<strong>Media</strong> menu; ASIO4ALL should open afterwards.</p>
+</blockquote></li>
+</ul>
+</body>
+</html>

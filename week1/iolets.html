@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Inlets and Outlets</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="/style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Inlets and Outlets</h1>
+</header>
+<h1 id="outlets-and-inlets">Outlets and Inlets</h1>
+<p>A Pd object is displayed on screen as a box that can generally be
+connected to other boxes. These <strong>connections</strong> can be made
+by hovering with the mouse pointer over the <strong>outlet</strong>
+(thicker line at the bottom of an object), to the <strong>inlet</strong>
+(thicker line at the top of an object) of another object. The cursor
+changes to a <strong>circle</strong> when you hover in and out of inlets
+and outlets, and to a <strong>hand</strong> when you click and drag to
+draw the connection cord.</p>
+<h1 id="hot-and-cold-inlets">Hot and Cold inlets</h1>
+<p>The left-most inlet is known as the <strong>hot inlet</strong>
+because whenever it receives a message this causes the object to emit
+some output to its outlets.</p>
+<p>In the case of the <code>print</code> object, which has one outlet,
+the message is immediately sent to (and therefore printed on) the Pd
+console.</p>
+<p><img src="/images/helloworld.png" width="700" alt="image" /></p>
+<p>However, certain objects have multiple inlets. In these cases, the
+first inlet keeps the same function as above, and the rest will generaly
+not cause the object to output anything. Instead they usually update
+internal variables of the object. This is why the rest of the inlets are
+called <strong>cold inlets</strong>.</p>
+<p>A group of objects that show this behavior is the <code>binary</code>
+operators for math operations like: <code>+, -, *, /</code></p>
+<p><img src="/images/hotcold.png" width="300" alt="image" /></p>
+<dl class="incremental">
+<dt>As such, when you change the right-most number box which is
+connected to the cold inlet, nothing happens visually. But, when you
+change the left-most number box connected to the hot inlet, a number is
+displayed on the bottom number box.</dt>
+<dd>
+<p>Precisely, the number output is the result of adding the left-most
+number to the most recent right-most number, ie. the number stored in
+the cold inlet.</p>
+</dd>
+</dl>
+<h1 id="order-of-execution">Order of Execution</h1>
+<p>One thing that is important to know is the order in which Pd objects
+process their outputs. Again, objects with one output are not an issue
+because the message is sent to the object's only output like the
+<code>+</code> object. There are objects with multiple outlets.</p>
+<p>The way Pd outputs its messages to multiple outputs is from
+<strong>right to left.</strong></p>
+<p><img src="/images/order.png" width="300" alt="image" /></p>
+<dl class="incremental">
+<dt><code>unpack</code></dt>
+<dd>
+<p>The <code>unpack</code> object takes a <strong>list</strong> of
+messages as input and distributes them in order to every outlet, so that
+the first element of the list correspond to the first outlet, the second
+of the list to the second outlet, etc. The output occurs as always
+<strong>from right to left</strong>.</p>
+</dd>
+</dl>
+<p>This is why, in the image above the first <code>-</code> object
+computes the substraction <code>5 - 3</code> correctly, ie
+<code>2</code>, while the second group does not. The output of the
+second group is <code>3</code>, which is the result of adding
+<code>3</code> to <code>0</code> which is the initial value of the
+<code>-</code> object, triggered first because it is connected to the
+right-most outlet of the <code>unpack</code>. After outputting the
+result, the value <code>5</code> is sent to the <strong>cold
+inlet</strong> of the <code>-</code> object.</p>
+<p>As you can tell, it is <em>very important</em> to keep in mind the
+order of execution when working with Pd objects.</p>
+</body>
+</html>

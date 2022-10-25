@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>The Sinusoid</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="/style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">The Sinusoid</h1>
+</header>
+<p><a href="/week1">week1</a> <a href="/week1/about.html">prev</a> <a
+href="/week1/using_pd.html">next</a></p>
+<p><img src="/images/sinusoid.png" width="400" alt="image" /></p>
+<h1 id="why-sinusoids">Why Sinusoids?</h1>
+<ul class="incremental">
+<li>They are a clear example of a digital audio signal.</li>
+<li><dl class="incremental">
+<dt>Very sensitive. A general rule of thumb is:</dt>
+<dd>
+<p><em>If it sounds good on a sinusoid, it will probably sound good on
+another type of signal.</em></p>
+</dd>
+</dl></li>
+<li><dl class="incremental">
+<dt>Think of sinusoids as a single, isolated "harmonic", so:</dt>
+<dd>
+<p><em>If you modify a complex spectrum, you modify each and every one
+of its harmonics. It is simpler to start with just one.</em></p>
+</dd>
+</dl></li>
+<li><dl class="incremental">
+<dt><strong>Fourier series</strong> uses sinusoids:</dt>
+<dd>
+<p><em>Summing sinusoids can represent any periodic wave, i.e.
+sound</em></p>
+</dd>
+</dl></li>
+</ul>
+<hr />
+<h1 id="digital-representation-of-signals">Digital Representation of
+Signals</h1>
+<p>Digital signals are sequences that are indexed by <code>n</code>,
+which is called the <strong>sample number</strong> <code>n</code></p>
+<h2 id="sequence-of-indices">Sequence of indices</h2>
+<p>The indices of the sequence can be represented like this:</p>
+<div
+class="line-block"> <code>..., n-2, n-1, n, n+1, n+2, ...</code></div>
+<h2 id="sequence-of-values">Sequence of values</h2>
+<dl class="incremental">
+<dt>To obtain the actual values of for these indices, we need a
+function, call it <code>f</code>, of the sample number.</dt>
+<dd>
+<p>A function is a mathematical term that defines a relationship between
+two sets, in this case, a sample number <code>n</code> and its output
+value, denoted <code>f(n)</code>.</p>
+</dd>
+</dl>
+<p>So, our <a href="#sequence-of-indices">Sequence of indices</a> above
+becomes an indexed sequence of values, like this:</p>
+<div
+class="line-block"> <code>..., f(n-2), f(n-1), f(n), f(n+1), f(n+2), ...</code></div>
+<hr />
+<h1 id="the-sine-function">The sine function</h1>
+<p>Given that the sinewave is an example of an audio signal, we need to
+find a function we can use. Luckily for us, we can make use of our
+trigonometry chops to use the <a
+href="https://en.wikipedia.org/wiki/Sine_and_cosine">sine</a>
+function.</p>
+<p><img src="/images/trigonometry.png" width="400" alt="image" /></p>
+<p>We can use the <code>sin</code> function in place of the
+<code>f</code> function above and it will give us the sine wave:</p>
+<div
+class="line-block"> <code>..., sin(n-2), sin(n-1), sin(n), sin(n+1), sin(n+2), ...</code></div>
+<blockquote>
+<p><a
+href="https://jackschaedler.github.io/circles-sines-signals/sincos.html">Here</a>'s
+a nice visual representation by Jack Schaedler</p>
+</blockquote>
+<hr />
+<p>Formally, we still need a few tweaks to the <code>sin</code> function
+above. So, the actual sinusoid needs to have <strong>all</strong> the
+following parameters:</p>
+<h2 id="fn-a-senωn-ø"><code>f(n) = a • sen(ωn + ø)</code></h2>
+<dl class="incremental">
+<dt>Where:</dt>
+<dd>
+<ul class="incremental">
+<li><code>n</code> <strong>sample number</strong></li>
+<li><code>a</code> <strong>amplitude</strong></li>
+<li><code>ω</code> angular <strong>frequency</strong></li>
+<li><code>ø</code> <strong>phase</strong> (we can ignore this one for
+now)</li>
+</ul>
+</dd>
+</dl>
+<p><img src="/images/sinusoid.png" width="400" alt="image" /></p>
+<hr />
+<h1 id="how-to-make-a-sinweave-in-pd">How to make a sinweave in Pd</h1>
+<p><img src="/images/sinewave_in_pd.png" width="400" alt="image" /></p>
+<p>This patch is real, open it with Pd <a
+href="sinewave.pd">here</a>.</p>
+<p>Go to <a href="using_pd.html">Using Pd</a> for a recipe.</p>
+</body>
+</html>

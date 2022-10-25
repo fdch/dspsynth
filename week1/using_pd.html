@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Using Pd</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="/style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Using Pd</h1>
+</header>
+<p><a href="/week1">week1</a> <a
+href="/week1/sinusoids.html">prev</a></p>
+<h1 id="the-pd-console">The Pd console</h1>
+<p>When opening Pd you will see Pd's console window first. This is where
+important debugging and other messages will be reported by Pd's internal
+and external objects.</p>
+<p><img src="/images/pdconsole.png" width="400" alt="image" /></p>
+<h1 id="a-new-patch">A new patch</h1>
+<h2 id="create-a-patch">Create a Patch</h2>
+<p>To start a new patch, you either click the menu entry <strong>File /
+New</strong>, or use the keyboard shortcut (recommended):</p>
+<ul class="incremental">
+<li>(linux, win) <code>ctrl + N</code></li>
+<li>(macos) <code>cmd + N</code></li>
+</ul>
+<p>Another window will appear:</p>
+<p><img src="/images/emptypatch.png" width="400" alt="image" /></p>
+<p>This window is called a <em>patch</em> and sometimes <em>canvas</em>.
+Within this window (and probably many others) you will make your
+patches.</p>
+<blockquote>
+<p>It is very important to know where you are located on your computer,
+and where to save Pd patches. For now we will not worry so much, but as
+patches get bigger, it gets exponentially more difficult to keep track
+of important files.</p>
+</blockquote>
+<h2 id="save-a-patch">Save a Patch</h2>
+<p>Now, we need to save our patch. Click the menu entry <strong>File /
+Save</strong> or use the keyboard shortcuts (recommended):</p>
+<ul class="incremental">
+<li><p>(linux, win) <code>ctrl + S</code></p></li>
+<li><p>(macos) <code>cmd + S</code></p>
+<blockquote>
+<p>From now on, I'll use <code>Ctrl</code> to simplify the text. Know
+that the key will change depending on your platform.</p>
+</blockquote></li>
+</ul>
+<p>And voilà, you have successfully created and saved your first
+patch.</p>
+<hr />
+<p>Now comes the part when whe actually do something.</p>
+<h1 id="pds-5-objects">Pd's 5 objects</h1>
+<p>Pure Data is such a compact program that it only offers a handful of
+visual or GUI (Graphicl User Interface) elements to work with. We will
+use mostly the first three.</p>
+<p>These can be summarized in the following FIVE (5) shortcuts:</p>
+<ul class="incremental">
+<li><dl class="incremental">
+<dt><code>Ctrl + 1</code> = Object</dt>
+<dd>
+<p>The <strong>object box</strong>: it all starts with a dotted box that
+allows you to immediately start typing the object name, eg.
+<code>print</code></p>
+</dd>
+</dl></li>
+<li><dl class="incremental">
+<dt><code>Ctrl + 2</code> = Message</dt>
+<dd>
+<dl class="incremental">
+<dt>The <strong>message box</strong>: it is a box with an indented right
+border that allows you to immediately start typing the message to send,
+eg. <code>hello world</code>.</dt>
+<dd>
+<p>This is also a GUI element that allows you to click on the box to
+output its contents.</p>
+</dd>
+</dl>
+</dd>
+</dl></li>
+<li><dl class="incremental">
+<dt><code>Ctrl + 3</code> = Number</dt>
+<dd>
+<p>The <strong>number box</strong>: is a GUI box with a clickable number
+that you can use to click and drag, or type a number to output it.</p>
+</dd>
+</dl></li>
+<li><dl class="incremental">
+<dt><code>Ctrl + 4</code> = List / Symbol</dt>
+<dd>
+<p>The <strong>list/symbol</strong> box is a GUI box enabing keyboard
+input for symbols or list. We will see more of these later.</p>
+</dd>
+</dl></li>
+<li><dl class="incremental">
+<dt><code>Ctrl + 5</code> = Comment</dt>
+<dd>
+<p>The <strong>text comment</strong> is there only to guide our future
+selves and others throught the flow of our program. It is wise to start
+using them early on. They contribute nothing to the actual program,
+except documentation and explanations without which our patch may become
+obscure.</p>
+</dd>
+</dl></li>
+</ul>
+<p>And that's it. Now we can start patching!</p>
+<hr />
+<h1 id="edit-mode">Edit Mode</h1>
+<p>The last thing you need to know is that you can interact with Pd in
+two ways:</p>
+<p>You can toggle between these with the <strong>Edit Mode</strong>
+switch, either from the menu entry <strong>File / Edit Mode</strong> or
+(recommended) via the shortcut: <code>Ctrl + E</code></p>
+<p><img src="/images/editmode.png" width="400" alt="image" /></p>
+<ol class="incremental" type="1">
+<li>When <strong>Edit mode</strong> is turned <strong>ON</strong> you
+can edit your patches, create objects, edit text, connect boxes,
+etc.</li>
+<li><dl class="incremental">
+<dt>When it is <strong>OFF</strong>, you can click objects, messages,
+and interact with the patch.</dt>
+<dd>
+<p>Sometimes this is called "run" mode, but it is really just
+"not-in-edit-mode".</p>
+</dd>
+</dl></li>
+</ol>
+<h1 id="recipe-for-a-sinewave">Recipe for a sinewave</h1>
+<p>A sinewave in 10 easy steps (no mouse involved)</p>
+<ol class="incremental" type="1">
+<li>Open Pd</li>
+<li><code>Ctrl + N</code></li>
+<li><code>Ctrl + 3</code></li>
+<li><code>Ctrl + 1</code></li>
+<li>Type (no quotes): "<code>osc~</code>"</li>
+<li><code>Ctrl + 1</code></li>
+<li>Type: "<code>*~ 0.1</code>" &lt;-- <strong>very important for this
+value to be 0.1</strong></li>
+<li><code>Ctrl + 1</code></li>
+<li>Type: "<code>dac~</code>"</li>
+<li><code>Ctrl + E</code></li>
+</ol>
+<p>If you followed everything <em>to-the-letter</em>, you should
+have:</p>
+<p><img src="/images/sine_recipe.png" width="200" alt="image" /></p>
+<h1 id="turning-on-the-dsp">Turning ON the DSP</h1>
+<p>If you would like to listen to this sinewave, then you need to turn
+DSP ON. You can do this via the big DSP button on the Pd Console, or via
+the shortcuts:</p>
+<div class="line-block"> <code>Ctrl + /</code> to turn it ON<br />
+ <code>Ctrl + .</code> to turn it OFF</div>
+<p>If you finished the <a href="#recipe-for-a-sinewave">Recipe for a
+sinewave</a>, you can now turn DSP ON and click and drag the number box
+to change the frequency of the sine wave.</p>
+</body>
+</html>
