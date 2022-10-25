@@ -2,7 +2,7 @@
 The Sinusoid
 ============
 
-`week1 </week1>`_ `prev </week1/about.html>`_ `next </week1/using_pd.html>`_
+`week1 ..<..>`_ `prev <../week1/about.html>`_ `next <../week1/using_pd.html>`_
 
 
 .. image:: ../images/sinusoid.png

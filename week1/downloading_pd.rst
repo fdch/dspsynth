@@ -2,7 +2,7 @@
 Downloading Pd
 ==============
 
-`week1 </week1>`_ `next </week1/why_pd.html>`_
+`week1 ..<..>`_ `next <../week1/why_pd.html>`_
 
 | To download Pd, head to https://msp.ucsd.edu/software.htm and **be sure to click on the link for your platform**. The current version as of now is **Pd-0.53-0**.
 
