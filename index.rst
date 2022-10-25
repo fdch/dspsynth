@@ -25,7 +25,7 @@ If you have quesions about those things, send me an email (see below).
 
 We will *not see any code* because Pd is a graphic programming environment, but we will go through some basic programming principles.
 You don't need to have previous experience with Pd or other programming languages.
-If you do have a experience with these languages, then the class should be informative because of the specific tools and techniques we will be covering.
+If you do have experience with these languages, then the class should be informative because of the specific tools and techniques we will be covering.
 Plus there's all that music stuff we do.
 During the term, if you are having serious problems, please come to talk to me so that I can work with you or adjust the syllabus to get things back on-track.
 
@@ -54,7 +54,7 @@ projects for the class.
 
 Here is a link to download the software that we may be using in class:
 
-- `puredata <http://msp.ucsd.edu/software.html.>`__
+- `puredata <http://msp.ucsd.edu/software.htm>`__
 
 We will have several guest speakers in the class during the term.
 Watch for announcements on the `course syllabus <syllabus.html>`__.
