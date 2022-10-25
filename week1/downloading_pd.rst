@@ -79,10 +79,10 @@ Audio Troubleshooting
 
 If there is no sound, then
 
-1. Check the obvius: 
+1. Check the obvious: 
     - Sound volumes are UP
     - Headphones are plugged-in, etc.
-2. Make sure you:
+2. Make sure you've:
     - selected the correct Audio Device in `Pd's Audio Settings`_
     - connected the Audio Device if it is periferal, or
     - set the in/out channels in `Pd's Audio Settings`_ to match your device's.
