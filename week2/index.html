@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Week 1</title>
+  <title>Week 2</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -26,37 +26,48 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Week 1</h1>
+<h1 class="title">Week 2</h1>
 </header>
 <p><a href="..">home</a> - <a href="../syllabus.html">syllabus</a> - <a
-href="downloading_pd.html">next</a></p>
-<h1 id="pure-data-basics">Pure Data Basics</h1>
-<p>In this class we introduce the structure of the class, and our
-beloved <a href="http://puredata.info">Pure Data (Pd)</a>.</p>
+href="sound.html">next</a></p>
+<h1 id="the-digital-signal">The Digital Signal</h1>
+<p>In this class we introduce digital audio signals and how to generate
+samples with a computer. Here's a nice old-school picture by <a
+href="https://en.wikipedia.org/wiki/Max_Mathews">Max Mathews</a>, a
+pioneer in computer music.</p>
+<p><img src="../images/dsp.png" width="400" alt="image" /></p>
 <p>The topics of this week's class are:</p>
 <ul class="incremental">
-<li>Intro to the class.</li>
-<li>Installing, configuring Pd.</li>
-<li>Making and saving a patch.</li>
-<li>The 5 objects in pd: object, message, number, symbol, comment.</li>
-<li>The sinusoid.</li>
-<li>Order of execution. Hot and Cold inlets.</li>
-<li>Simple math exercises.</li>
+<li>The sample</li>
+<li>Sample rate</li>
+<li>The Nyquist Theorem</li>
+<li>Aliasing</li>
+<li>Differences between audio and control signals.</li>
 </ul>
 <p>After the class you will have some exercises and a better idea of the
-following Pd objects: - <code>unpack</code>, - <code>trigger</code>, -
-<code>+</code>, - <code>-</code>, - <code>*</code>, - <code>/</code>, -
-<code>print</code></p>
+following Pd objects:</p>
+<ul class="incremental">
+<li><code>osc~</code></li>
+<li><code>dac~</code></li>
+<li><code>adc~</code></li>
+</ul>
 <p>Here's how we will navigate the class:</p>
 <ol class="incremental" type="1">
-<li><a href="downloading_pd.html">Downloading Pd</a></li>
-<li><a href="why_pd.html">Why Pd?</a></li>
-<li><a href="about.html">About the class</a></li>
-<li><a href="sinusoids.html">Sinusoids</a></li>
-<li><a href="using_pd.html">Using Pd</a></li>
-<li><a href="iolets.html">Inlets and Outlets</a></li>
+<li><a href="sound.html">Sound</a></li>
+<li><a href="digital_audio.html">Digital Audio</a></li>
+<li><a href="digital_audio_signals.html">Digital Audio Signal</a></li>
 <li><a href="exercises.html">Exercises</a></li>
 </ol>
+<h2 id="bibliography">Bibliography</h2>
+<p>Here are some interesting tutorials if you would like to dig deeper
+on digital audio signals:</p>
+<ul class="incremental">
+<li>Brief tutorial on Floss Manuals on Pd with is <a
+href="https://archive.flossmanuals.net/pure-data/introduction/what-is-digital-audio.html">a
+section on digital audio</a></li>
+<li>The digital audio section of Kreidler's <a
+href="http://www.pd-tutorial.com/">book</a></li>
+</ul>
 <hr />
 <h1 id="notes-from-class">Notes from class</h1>
 <p>---</p>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Digital Audio</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Digital Audio</h1>
+</header>
+<p><a href=".">week2</a> - <a href="sound.html">prev</a> - <a
+href="digital_audio_signals.html">next</a></p>
+<p>Digital audio is the encoding of an electrical signal that represents
+a sound wave. In the following image we see the digital signal flow
+diagram.</p>
+<p>At the left of the image we have the medium in which sound is
+moving.</p>
+<p><img src="../images/digital_audio.png" width="600"
+alt="digital" /></p>
+<h1 id="analogue-input">Analogue Input</h1>
+<p>To capture pressure changes we need a microphone. Microphones are
+capable of sensing tiny pressure changes and transducing them to an
+electrical signal.</p>
+<h1 id="electrical-voltages">Electrical voltages</h1>
+<p>This electrical signal contain voltage variations that occurr along
+the cable connecting the microphone to the audio interface.</p>
+<h1 id="numerical-encoding">Numerical Encoding</h1>
+<p>Inside the audio interface occurs the encoding of the electrical
+signal into numerical data. Each datum of that numerical data is called
+a <strong>sample</strong></p>
+<h1 id="digital-system">Digital System</h1>
+<p>The <strong>digital system</strong> of the image is in charge of
+processing the samples. Pd is an example of such, naturally.</p>
+<p>The bottom part of the image works exactly the same, only in reverse
+order.</p>
+<p>Compare this image with (again) Max's diagram.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Digital signal flow</td>
+<td>Max Mathews' diagram</td>
+</tr>
+<tr class="even">
+<td><img src="../images/digital_audio.png" width="600"
+alt="digital" /></td>
+<td><img src="../images/dsp.png" width="600" alt="max" /></td>
+</tr>
+</tbody>
+</table>
+<p>Note that Max's diagram corresponds to the bottom part of the first
+image: generating samples with a computer.</p>
+<hr />
+</body>
+</html>

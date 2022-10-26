@@ -2,27 +2,31 @@
 Week 1
 ======
 
-`home <..>`_ - `syllabus </syllabus.html>`_ - `next <downloading_pd.html>`_
+`home <..>`_ - `syllabus <../syllabus.html>`_ - `next <downloading_pd.html>`_
+
+Pure Data Basics
+----------------
 
 In this class we introduce the structure of the class, and our beloved `Pure Data (Pd) <http://puredata.info>`__. 
 
 The topics of this week's class are:
-    - Intro to the class. 
-    - Installing, configuring Pd. 
-    - Making and saving a patch. 
-    - The 5 objects in pd: object, message, number, symbol, comment.
-    - The sinusoid.
-    - Order of execution. Hot and Cold inlets.
-    - Simple math exercises.
+
+- Intro to the class. 
+- Installing, configuring Pd. 
+- Making and saving a patch. 
+- The 5 objects in pd: object, message, number, symbol, comment.
+- The sinusoid.
+- Order of execution. Hot and Cold inlets.
+- Simple math exercises.
     
 After the class you will have some exercises and a better idea of the following Pd objects:
-    - ``unpack``,
-    - ``trigger``,
-    - ``+``,
-    - ``-``,
-    - ``*``,
-    - ``/``,
-    - ``print``
+- ``unpack``,
+- ``trigger``,
+- ``+``,
+- ``-``,
+- ``*``,
+- ``/``,
+- ``print``
 
 Here's how we will navigate the class:
 

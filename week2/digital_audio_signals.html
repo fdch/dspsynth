@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Digital Audio Signal</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Digital Audio Signal</h1>
+</header>
+<p><a href=".">week2</a> - <a href="digital_audio.html">prev</a> - <a
+href=".">next</a></p>
+<p>If you recall from a previous class on <a
+href="../week1/sinusoids.html">sinusoids</a>:</p>
+<blockquote>
+<p>digital signals are sequences that are indexed by <code>n</code>,
+which is called the <strong>sample number</strong> <code>n</code>, and
+to obtain the actual values of for these indices, we need a function,
+call it <code>f</code>, of the sample number.</p>
+</blockquote>
+<p>Now, because we are inside a computer, this sequence is slightly
+different:</p>
+<div
+class="line-block"> <code>..., x[n-2], x[n-1], x[n], x[n+1], x[n+2], ...</code></div>
+<p>The notation <code>x[n]</code> means that our digital signal is
+stored inside the computer on a portion of the memory of the computer,
+ie. an <strong>array</strong>, that is named <code>x</code>, and we call
+elements of that array by the index <code>n</code>, which is our sample
+number.</p>
+<p>Here's an image that displays such array of 50 samples (indexed from
+0 to 49):</p>
+<p><img src="../images/audiosignals.png" width="500" alt="image" /></p>
+<p>Part <strong>b</strong> of the picture represents a continuous
+version of the same digital audio signal. This is important to note:
+digital audio signals are <strong>discrete</strong>, ie not continuous,
+because computer memory is also discrete.</p>
+<blockquote>
+<p>This of course brings out a plethora of problems because sound is a
+continuous phenomenon, but this is a story for another time, and a
+problem that can be approached using algebra and discrete
+mathematics...</p>
+</blockquote>
+<p>The digital audio signal, then, is obtained from two processes:</p>
+<ul class="incremental">
+<li>Sampling</li>
+<li>Digital Cuantification (we won't get into this...)</li>
+</ul>
+</body>
+</html>

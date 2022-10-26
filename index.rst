@@ -1,9 +1,11 @@
+.. image:: ./images/dsptech.jpg
+    :width: 100%
+
+
 ====================================
 Digital Signal Processing Techniques
 ====================================
 
-.. image:: ./images/dsptech.jpg
-    :width: 400
 
 ----
 
