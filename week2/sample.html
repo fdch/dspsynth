@@ -28,6 +28,120 @@
 <header id="title-block-header">
 <h1 class="title">Sample</h1>
 </header>
-
+<p><a href=".">week2</a> - <a href="digital_audio_signals.html">prev</a>
+- <a href="sample.html">next</a></p>
+<p>An audio sample is a single measure of <a
+href="#amplitude">Amplitude</a>, with a certain <a
+href="#resolution">Resolution</a>, that corresponds to a moment in time
+of an electrical signal representing sound.</p>
+<p>The diagram below summarizes this process:</p>
+<p><img src="../images/sampling.jpg" width="500" alt="image" /></p>
+<p>To create a digital representation of the electrical signal, there
+must be a constant rate at which samples are taken. This is the sampling
+pulse above, which we generally refer to as <strong>sampling
+rate</strong>.</p>
+<h1 id="amplitude">Amplitude</h1>
+<p>The resulting signal is composed of positive and negative integers
+spaced at the sampling rate. Each one of these samples holds the
+<strong>amplitude</strong> of the signal at that moment. This
+constitutes the digital audio signal.</p>
+<blockquote>
+<p>Because of an important theorem called the Nyquist-Shannon Theorem,
+this signal can be (almost) fully reconstructed. This is why we say that
+the digital audio signal can represent sound.</p>
+</blockquote>
+<p>For now, let's simply consider amplitude as the <strong>numerical
+value of each sample</strong>.</p>
+<p>Amplitude is the base of all the digital audio field: everything
+relates to amplitude.</p>
+<blockquote>
+<p>However, amplitude is neither "volume" nor "loudness", but we will
+see how it affects them just as much as it affects "pitch" and
+"timbre".</p>
+</blockquote>
+<h1 id="resolution">Resolution</h1>
+<p>In digital audio, each sample is represented as a <strong>binary
+number</strong>. In binary representaiton, the size of the binary number
+determines the maximum number it can represent. For example, if a number
+has 2 bits, then the maximum number it can represent is 4, and here are
+other common values:</p>
+<table>
+<thead>
+<tr class="header">
+<th>bit depth</th>
+<th>max number</th>
+<th>integer range</th>
+<th>amplitude resolution</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>4 bit</td>
+<td>2^4 = 16</td>
+<td>0 to 15,</td>
+<td><code>-15...15</code></td>
+</tr>
+<tr class="even">
+<td>8 bit</td>
+<td>2^8 = 256</td>
+<td>0 to 255,</td>
+<td><code>-255...255</code></td>
+</tr>
+<tr class="odd">
+<td>16 bit</td>
+<td>2^16 = 65536</td>
+<td>0 to 65535,</td>
+<td><code>-65535...65535</code></td>
+</tr>
+<tr class="even">
+<td>24 bit</td>
+<td>2^24 = 16777216</td>
+<td>0 to 2^24-1,</td>
+<td><code>-2^24-1...2^24-1</code></td>
+</tr>
+<tr class="odd">
+<td>32 bit</td>
+<td>2^32 = 4294967296</td>
+<td>0 to 2^32-1,</td>
+<td><code>-2^32-1...2^32-1</code></td>
+</tr>
+</tbody>
+</table>
+<p>As you can see, if the bit depth is low, the binary number cannot be
+too high. This means that there will not be a good
+<strong>resolution</strong>.</p>
+<blockquote>
+<p>For a long time digital audio was recorded in 16-bit, then came 24,
+and finally 32 bit as computers got faster and cheaper. Here's a good
+explanation of <a
+href="https://www.sounddevices.com/32-bit-float-files-explained">32-bit
+depth</a></p>
+</blockquote>
+<p>In the visual world, this can be seen with lower resolution
+images:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Resolution</th>
+<th>Very Low</th>
+<th>Low</th>
+<th>Medium</th>
+<th>Maximum</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Image</td>
+<td><img src="../images/shannon-3.jpg" width="350" height="180"
+alt="shan3" /></td>
+<td><img src="../images/shannon-2.jpg" width="350" height="180"
+alt="shan2" /></td>
+<td><img src="../images/shannon-1.jpg" width="350" height="180"
+alt="shan1" /></td>
+<td><img src="../images/shannon-0.jpg" width="350" height="180"
+alt="shan" /></td>
+</tr>
+</tbody>
+</table>
 </body>
 </html>

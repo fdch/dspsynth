@@ -14,10 +14,11 @@ In this class we introduce digital audio signals and how to generate samples wit
 
 The topics of this week's class are:
 
+- Sound
+- Digital Audio Signals
 - The sample
-- Sample rate
-- The Nyquist Theorem
-- Aliasing
+- Sampling rate
+- Amplitude. Resolution
 - Differences between audio and control signals.
 
 After the class you will have some exercises and a better idea of the following Pd objects:
@@ -31,6 +32,7 @@ Here's how we will navigate the class:
 1. `Sound <sound.html>`_
 2. `Digital Audio <digital_audio.html>`_
 3. `Digital Audio Signal <digital_audio_signals.html>`_
+4. `Samples <sample.html>`_
 7. `Exercises <exercises.html>`_
 
 

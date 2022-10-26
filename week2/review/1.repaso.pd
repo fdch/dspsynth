@@ -1,0 +1,434 @@
+#N canvas 134 87 469 299 12;
+#X text 20 23 Cliquear en estos subpatches en modo RUN;
+#N canvas 342 47 891 562 Conexiones 0;
+#X floatatom 70 378 5 0 0 0 - - - 0;
+#X obj 70 418 pack;
+#X floatatom 136 377 5 0 0 0 - - - 0;
+#X obj 70 463 line;
+#X obj 136 421 pack;
+#X obj 136 466 line;
+#X obj 70 501 print A;
+#X obj 136 501 print B;
+#X floatatom 281 378 5 0 0 0 - - - 0;
+#X obj 281 416 pack;
+#X floatatom 347 377 5 0 0 0 - - - 0;
+#X obj 281 457 line;
+#X obj 347 415 pack;
+#X obj 347 456 line;
+#X obj 281 498 print A;
+#X obj 347 497 print B;
+#X text 20 162 1) Ir al "outlet";
+#X text 20 182 2) Notar un círculo que reemplaza la mano;
+#X text 20 202 3) Hacer click \, y sin soltar arrastrar hasta otro
+objeto;
+#X text 20 222 4) Finalmente \, a un "inlet" y soltar cuando aparece
+nuevamente el círculo.;
+#X text 396 19 CONEXIONES;
+#X text 20 307 Conectar las mismas conexiones del patch del patch patcheado
+en el no-patcheado. Luego \, eliminar todas las conexiones así queda
+solamente uno patcheado.;
+#X text 18 282 Ejercicio:;
+#X text 221 44 Para conectar los objetos debemos estar en modo Edición.
+;
+#X text 18 117 Con el puntero de mano \, hacemos lo siguiente (orden
+importa):;
+#X obj 599 451 print;
+#X msg 599 383 104 111 108 97;
+#X obj 599 417 list tosymbol;
+#X text 467 162 1) Seleccionar dos objetos;
+#X text 467 182 2) Teclear "Ctrl + K";
+#X text 531 83 ATAJO:;
+#X text 155 83 CLICK + ARRASTRE:;
+#X text 475 282 Ejercicio:;
+#X text 473 307 1) Seleccionar los primeros dos objetos y conectarlos
+por atajo.;
+#X text 473 340 2) Seleccionar los segundos dos objetos y conectarlos
+por atajo.;
+#X text 539 500 ¿Qué aparece en la consola?;
+#X text 452 117 Ahora existe un atajo "Ctrl + K" que permite conectar
+objetos:;
+#X connect 0 0 1 0;
+#X connect 0 0 4 1;
+#X connect 1 0 3 0;
+#X connect 1 0 5 0;
+#X connect 2 0 1 1;
+#X connect 2 0 4 0;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 4 0 3 0;
+#X connect 5 0 7 0;
+#X restore 20 93 pd Conexiones;
+#N canvas 682 66 490 364 Tipos_de_Cajas 0;
+#X obj 54 129 metro;
+#X floatatom 359 129 5 0 0 0 - - - 0;
+#X msg 200 129 message;
+#X text 21 58 Los 3 objetos patcheables que más utilizaremos.;
+#X text 50 96 Objeto:;
+#X text 190 96 Mensaje:;
+#X text 354 96 Número:;
+#X text 181 15 TIPOS DE CAJAS;
+#X text 29 191 Cada una de las cajas tiene una funcion. Es decir \,
+las cajas de objetos son PROGRAMAS con ciertas reglas. Todos se pueden
+patchear o conectar con cables.;
+#X text 33 271 Dicho de manera técnica \, los objetos en Pd son instanciaciones
+de clases escritas en C \, y por lo tanto \, podemos llamar los métodos
+que son accesibles desde Pd.;
+#X restore 20 45 pd Tipos_de_Cajas;
+#N canvas 501 77 564 494 Edición_y_Ejecución 0;
+#X obj 217 364 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 184 364 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X text 248 363 comment;
+#X text 45 44 Hay dos modos: EDIT y RUN (o no-edit);
+#X text 45 61 Para alternar entre ellos se usa el atajo "Ctrl + E"
+;
+#X text 178 210 ATAJOS PARA CREAR OBJETOS:;
+#X text 227 260 Objeto: Ctrl + 1;
+#X text 220 279 Mensaje: Ctrl + 2;
+#X text 227 299 Número: Ctrl + 3;
+#X text 45 166 En modo RUN \, en cambio \, verás una flecha como puntero.
+;
+#X text 45 92 Se puede crear patches ('patchear') solamente en modo
+edición. En este modo \, si mueves el mouse verás una mano como puntero
+del mouse. También \, se verá un cambio en la barra superior que
+indica que está activado.;
+#X text 45 210 Ejercicio:;
+#X text 80 338 En el Menú "Poner" están todos los demás atajos.
+Crear los siguientes:;
+#X text 71 432 ¿Qué pasa con el MODO EDICIÓN cuando insertan un
+atajo desde modo RUN?;
+#X text 241 15 MODO EDICIÓN;
+#X restore 20 69 pd Edición_y_Ejecución;
+#N canvas 336 109 549 326 Conexiones_Inteligentes 0;
+#X text 194 24 PATCHEO "INTELIGENTE";
+#X text 66 53 Esta es una reciente adición a Pd que facilita mucho
+la conexión entre objetos. Todavía tiene algunos bugs \, así que
+repórtenlos;
+#N canvas 173 189 510 300 muchos_a_uno 0;
+#X floatatom 63 129 5 0 0 0 - - - 0;
+#X obj 167 166 pack f f f f f f f f;
+#X floatatom 107 114 5 0 0 0 - - - 0;
+#X floatatom 157 114 5 0 0 0 - - - 0;
+#X floatatom 197 114 5 0 0 0 - - - 0;
+#X floatatom 247 114 5 0 0 0 - - - 0;
+#X floatatom 287 114 5 0 0 0 - - - 0;
+#X floatatom 337 114 5 0 0 0 - - - 0;
+#X floatatom 377 114 5 0 0 0 - - - 0;
+#X text 41 75 1) Seleccionar todos estos objetos;
+#X text 44 207 2) Conectar el "outlet" del primer Número con el primer
+"inlet" de [pack]... pero \, apretar SHIFT antes de soltar.;
+#X text 32 25 Conectar muchos objetos aislados con un objeto con muchos
+inlets;
+#X restore 72 119 pd muchos_a_uno;
+#N canvas 173 189 510 300 uno_a_muchos 0;
+#X floatatom 63 149 5 0 0 0 - - - 0;
+#X floatatom 107 159 5 0 0 0 - - - 0;
+#X floatatom 157 159 5 0 0 0 - - - 0;
+#X floatatom 197 159 5 0 0 0 - - - 0;
+#X floatatom 247 159 5 0 0 0 - - - 0;
+#X floatatom 287 159 5 0 0 0 - - - 0;
+#X floatatom 337 159 5 0 0 0 - - - 0;
+#X floatatom 377 159 5 0 0 0 - - - 0;
+#X text 41 75 1) Seleccionar todos estos objetos;
+#X text 32 25 Conectar muchos objetos aislados con un objeto con muchos
+inlets;
+#X obj 137 106 unpack f f f f f f f f;
+#X text 44 207 2) Conectar el primer "outlet" de [unpack] con el "inlet"
+del primer Número... pero \, apretar SHIFT antes de soltar.;
+#X restore 72 164 pd uno_a_muchos;
+#N canvas 215 235 450 300 entre_objetos 0;
+#X floatatom 66 46 5 0 0 0 - - - 0;
+#X obj 78 79 * 2;
+#X obj 66 115 print;
+#X text 133 74 1) Seleccionar los tres objetos;
+#X text 134 106 2) "Ctrl + K";
+#X text 44 169 NOTA: Se puede usar para conectar tanto como para desconectar
+;
+#X connect 0 0 2 0;
+#X restore 71 215 pd entre_objetos;
+#X restore 20 117 pd Conexiones_Inteligentes;
+#N canvas 372 22 668 717 Hot_Cold 0;
+#X floatatom 45 123 5 0 0 0 - - - 0;
+#X obj 61 158 +;
+#X floatatom 92 124 5 0 0 0 - - - 0;
+#X floatatom 61 196 5 0 0 0 - - - 0;
+#X obj 165 127 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 189 163 f;
+#X floatatom 219 127 5 0 0 0 - - - 0;
+#X floatatom 189 198 5 0 0 0 - - - 0;
+#X floatatom 89 432 5 0 0 0 - - - 0;
+#X floatatom 216 431 5 0 0 0 - - - 0;
+#X obj 216 409 +;
+#X obj 89 410 +;
+#X msg 61 369 2;
+#X msg 126 371 3;
+#X msg 197 371 2;
+#X msg 246 370 3;
+#X obj 84 309 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 84 329 t b b;
+#X obj 213 308 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 213 328 t b b;
+#X text 50 305 a);
+#X text 167 307 b);
+#X obj 353 500 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 434 540 t b b b b;
+#X msg 526 563 3;
+#X msg 487 572 2;
+#X msg 449 573 1;
+#X msg 402 571 bang;
+#X obj 463 615 print;
+#X floatatom 114 614 5 0 0 0 - - - 0;
+#X obj 123 640 +;
+#X floatatom 123 662 5 0 0 0 - - - 0;
+#X floatatom 151 614 5 0 0 0 - - - 0;
+#X floatatom 259 594 5 0 0 0 - - - 0;
+#X obj 259 664 +;
+#X floatatom 259 686 5 0 0 0 - - - 0;
+#X floatatom 283 613 5 0 0 0 - - - 0;
+#X obj 283 638 t b f;
+#X text 22 36 Muchos objetos tienen más de un inlet. Al de la izquierda
+se lo llama "hot" \, porque enviar un valor allí causa que el programa
+del objeto se ejecute. A el o los inlet/s restante se los llama "cold"
+pues no ejecutan el programa \, sino actualiza variables dentro del
+objeto. Esto se ve aquí:, f 80;
+#X obj 340 109 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 351 150 f;
+#X obj 351 198 print;
+#X floatatom 421 120 5 0 0 0 - - - 0;
+#X floatatom 470 120 5 0 0 0 - - - 0;
+#X obj 351 174 pack f f f;
+#X floatatom 376 120 5 0 0 0 - - - 0;
+#X text 22 263 Así \, el Orden de Ejecución es muy importante. Por
+ejemplo \, hacer click SOLO UNA VEZ en los siguientes bangs:;
+#X text 325 329 Si tu objetivo es sumar 2 + 3 y obtener 5 \, entonces
+b) está mal y a) está bien., f 40;
+#X text 374 497 <- Hacer click y mirar la consola;
+#X text 61 563 Finalmente \, ¿Qué diferencia hay entre estos patches?:
+, f 34;
+#X text 240 15 INLETS HOT Y COLD;
+#X text 241 241 ORDEN DE EJECUCION;
+#X text 48 482 Esto es así pues [trigger] envía sus valores a sus
+outlets de derecha a izquierda ---->, f 45;
+#X text 377 99 EJEMPLO: lista de 3 floats;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 1;
+#X connect 4 0 5 0;
+#X connect 5 0 7 0;
+#X connect 6 0 5 1;
+#X connect 10 0 9 0;
+#X connect 11 0 8 0;
+#X connect 12 0 11 0;
+#X connect 13 0 11 1;
+#X connect 14 0 10 0;
+#X connect 15 0 10 1;
+#X connect 16 0 17 0;
+#X connect 17 0 12 0;
+#X connect 17 1 13 0;
+#X connect 18 0 19 0;
+#X connect 19 0 15 0;
+#X connect 19 1 14 0;
+#X connect 22 0 23 0;
+#X connect 23 0 27 0;
+#X connect 23 1 26 0;
+#X connect 23 2 25 0;
+#X connect 23 3 24 0;
+#X connect 24 0 28 0;
+#X connect 25 0 28 0;
+#X connect 26 0 28 0;
+#X connect 27 0 28 0;
+#X connect 29 0 30 0;
+#X connect 30 0 31 0;
+#X connect 32 0 30 1;
+#X connect 33 0 34 0;
+#X connect 34 0 35 0;
+#X connect 36 0 37 0;
+#X connect 37 0 34 0;
+#X connect 37 1 34 1;
+#X connect 39 0 40 0;
+#X connect 40 0 44 0;
+#X connect 42 0 44 1;
+#X connect 43 0 44 2;
+#X connect 44 0 41 0;
+#X connect 45 0 40 1;
+#X restore 20 165 pd Hot_Cold;
+#N canvas 560 108 547 434 Argumentos 0;
+#X obj 35 119 + 30;
+#X obj 34 162 +;
+#X floatatom 69 292 5 0 0 0 - - - 0;
+#X obj 69 331 +;
+#X floatatom 69 373 5 0 0 0 - - - 0;
+#X floatatom 119 293 5 0 0 0 - - - 0;
+#X floatatom 119 374 5 0 0 0 - - - 0;
+#X obj 119 332 + 30;
+#X floatatom 89 118 5 0 0 0 - - - 0;
+#X text 222 29 ARGUMENTOS;
+#X text 31 64 Un argumento es un valor inicial que se le da a un objeto
+o función, f 67;
+#X text 34 141 o sin argumentos \, como:;
+#X text 28 88 En general \, se pueden crear objetos con argumentos:
+;
+#X text 33 207 En todos los casos \, si no hay argumento \, se utiliza
+un argumento por default \, predefinido por el objeto. En general \,
+es 0 (como en este caso).;
+#X floatatom 389 293 5 0 0 0 - - - 0;
+#X floatatom 389 374 5 0 0 0 - - - 0;
+#X obj 389 332 + 30;
+#X text 200 317 NOTA: en este objeto \, el segundo inlet actualiza
+el argumento:, f 24;
+#X floatatom 450 301 5 0 0 0 - - - 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 7 0;
+#X connect 7 0 6 0;
+#X connect 8 0 0 1;
+#X connect 14 0 16 0;
+#X connect 16 0 15 0;
+#X connect 18 0 16 1;
+#X restore 20 189 pd Argumentos;
+#N canvas 743 257 450 344 Orden_Visual 0;
+#X obj 100 115 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 100 135 print;
+#X obj 168 137 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 152 115 print;
+#X obj 42 143 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 137 289 print;
+#X obj 222 256 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 270 153 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 384 183 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 297 233 print;
+#X obj 344 292 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X text 24 50 Es útil pensar el flujo de datos de arriba abajo. Pero
+\, visualmente no hay nada que imponga esta direccion. Así \, todos
+estos son el mismo patch:;
+#X text 184 20 ORDEN VISUAL;
+#X connect 0 0 1 0;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 10 0 6 0;
+#X restore 20 213 pd Orden_Visual;
+#N canvas 569 71 613 608 Ejercicios 0;
+#X obj 174 73 line;
+#X floatatom 324 297 5 0 0 0 - - - 0;
+#X obj 324 318 +;
+#X floatatom 324 340 5 0 0 0 - - - 0;
+#X text 96 289 |;
+#X text 96 292 v;
+#X text 214 13 EJERCICIOS FUNDAMENTALES;
+#X text 20 75 Eliminar este objeto;
+#X text 216 74 (seleccion + delete);
+#X text 287 99 (click + flecha derecha o abajo + ~);
+#X text 17 100 Cambiar este objeto a "line~":;
+#X text 17 130 Cambiar este objeto a "unpack":;
+#X text 287 129 (click + flecha izquierda o arriba + "un");
+#X obj 247 99 line;
+#X obj 247 129 pack;
+#X text 20 34 Ir a modo Edición:;
+#X text 74 159 NOTAR: 1) para borrar un objeto hay que seleccionarlo
+;
+#X text 74 179 NOTAR: 2) para editar el texto de un objeto hay que
+hacer click dentro del objeto y \, cuando el texto se pinta \, teclear
+;
+#X text 62 276 2) Moverlo aquí;
+#X text 54 365 3) Eliminarlo;
+#X text 250 365 NOTA: usar las flechas del teclado;
+#X text 250 380 mientras apretas SHIFT;
+#X text 29 220 ____________________________________________________________
+;
+#X text 29 400 ____________________________________________________________
+;
+#X text 29 50 ____________________________________________________________
+;
+#X obj 58 488 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 78 478 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 98 478 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 118 488 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 128 508 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 118 528 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 98 538 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 78 538 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 58 528 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 48 508 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X text 29 424 Hacer un círculo de TOGGLES pero usar duplicación
+("Ctrl + D") y flechas de teclado con o sin SHIFT para mover;
+#X obj 214 495 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X text 363 288 NOTA: Deseleccionar objetos clickeando mientras apretas
+shift, f 18;
+#X text 257 275 1) Seleccionar los 3 objetos conectados;
+#X text 300 294 -->;
+#X text 300 314 -->;
+#X text 300 344 -->;
+#X text 27 248 Ahora \, seleccionar \, mover y eliminar estos objetos
+;
+#X text 154 546 NOTA: hay un sub-mundo de pd-art con estos objetos...
+;
+#X obj 87 505 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 25 0 34 0;
+#X connect 27 0 26 0;
+#X connect 28 0 27 0;
+#X connect 29 0 28 0;
+#X connect 30 0 29 0;
+#X connect 31 0 30 0;
+#X connect 32 0 31 0;
+#X connect 33 0 32 0;
+#X connect 34 0 33 0;
+#X connect 44 0 25 0;
+#X restore 20 237 pd Ejercicios;
+#N canvas 236 258 632 319 Autopatch 0;
+#X floatatom 84 124 5 0 0 0 - - - 0;
+#X obj 84 143 +;
+#X floatatom 84 165 5 0 0 0 - - - 0;
+#X obj 84 184 +;
+#X floatatom 84 206 5 0 0 0 - - - 0;
+#X obj 84 247 -;
+#X obj 84 225 +;
+#X floatatom 84 269 5 0 0 0 - - - 0;
+#X msg 84 102;
+#X text 484 68 |;
+#X text 484 71 v;
+#X text 32 39 Cuando creamos objetos con atajos \, éstos se conectan
+automáticamente a sus primeros iolets.;
+#X text 217 93 Hacer una copia del patch de la izquierda usando solo
+el teclado \, comenzando: "Ctrl + 2" \, "Ctrl + 3" \, etc, f 27;
+#X text 494 68 |;
+#X text 494 71 v;
+#X text 193 12 AUTOPATCH (conexiones automáticas);
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 5 0 7 0;
+#X connect 6 0 5 0;
+#X connect 8 0 0 0;
+#X restore 20 141 pd Autopatch;

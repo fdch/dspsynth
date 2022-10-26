@@ -2,7 +2,7 @@
 Digital Audio Signal
 ====================
 
-`week2 <.>`_ - `prev <digital_audio.html>`_ - `next <.>`_
+`week2 <.>`_ - `prev <digital_audio.html>`_ - `next <sample.html>`_
 
 If you recall from a previous class on `sinusoids <../week1/sinusoids.html>`_: 
     
@@ -26,6 +26,6 @@ This is important to note: digital audio signals are **discrete**, ie not contin
 
 The digital audio signal, then, is obtained from two processes:
 
-- Sampling
+- Sampling, the process to obtain audio `samples <sample.html>`_
 - Digital Cuantification (we won't get into this...)
 
