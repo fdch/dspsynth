@@ -1,0 +1,10 @@
+#N canvas 344 64 621 485 12;
+#X obj 61 55 print;
+#X obj 73 96 +;
+#X text 104 55 <-- one inlet \, no outlets;
+#X text 104 97 <-- two inlets \, one outlet;
+#X obj 58 135 t b b;
+#X text 104 135 <-- one inlet \, two outlets;
+#X obj 39 181 loadbang;
+#X text 104 181 <-- no inlets \, one outlet;
+#X text 86 9 Inlets and Outlets;

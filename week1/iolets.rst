@@ -2,11 +2,22 @@
 Inlets and Outlets
 ==================
 
+`week1 <../week1>`_ - `prev <../week1/using_pd.html>`_ - `next <../week1/exercises.html>`_
+
 Outlets and Inlets
 ------------------
 
 A Pd object is displayed on screen as a box that can generally be connected to other boxes.
+
+.. image:: ../images/iolets.png
+    :width: 400
+
 These **connections** can be made by hovering with the mouse pointer over the **outlet** (thicker line at the bottom of an object), to the **inlet** (thicker line at the top of an object) of another object.
+
+.. image:: ../images/connecting.gif
+    :width: 300
+
+
     The cursor changes to a **circle** when you hover in and out of inlets and outlets, and to a **hand** when you click and drag to draw the connection cord.
 
 

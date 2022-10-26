@@ -2,7 +2,7 @@
 Week 1
 ======
 
-`home </>`_ - `syllabus </syllabus.html>`_
+`home <..>`_ - `syllabus </syllabus.html>`_ - `next <downloading_pd.html>`_
 
 In this class we introduce the structure of the class, and our beloved `Pure Data (Pd) <http://puredata.info>`__. 
 
@@ -36,5 +36,13 @@ Here's how we will navigate the class:
 
 ----
 
-Notes from the class
+Notes from class
+----------------
 
+---
+
+
+In-patch classes
+----------------
+
+`Here are the patches <./patches>`_ that we made in class.
