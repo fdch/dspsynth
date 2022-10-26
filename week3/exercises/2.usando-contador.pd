@@ -1,0 +1,114 @@
+#N canvas 293 59 901 559 12;
+#X obj 596 88 sel;
+#X obj 598 300 mod;
+#X text 348 33 MANIPULANDO UN CONTADOR;
+#N canvas 110 120 450 300 respuesta 0;
+#X obj 140 81 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 140 146 f;
+#X obj 184 171 + 1;
+#X floatatom 140 184 5 0 0 0 - - - 0;
+#X msg 173 101 0;
+#X text 204 101 reset;
+#X obj 140 213 print;
+#X text 167 139 <- notar el inlet "cold";
+#X text 42 80 paso / step;
+#X text 214 171 tamaño del paso / step size;
+#X text 46 27 Este es el contador básico. Llamémoslo "patch original"
+;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 1;
+#X connect 3 0 6 0;
+#X connect 4 0 1 1;
+#X restore 57 244 pd respuesta "patch original";
+#X obj 118 132 f;
+#X floatatom 206 132 5 0 0 0 - - - 0;
+#X text 453 123 ¿Cómo modificarías el patch original para que se
+resetee cada vez que llega al número 11?;
+#X text 45 352 Pon tus respuestas aquí:;
+#X text 36 297 2) how would you modify the original patch in order
+to:;
+#X text 57 320 2a) incremente 2 cada paso;
+#X text 57 337 2b) se mueva 1 cada paso \, pero en sentido opuesto
+;
+#X obj 81 132 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 160 132 +;
+#X text 42 91 1) Hacer un contador usando estos objetos:;
+#N canvas 131 143 450 300 respuesta 0;
+#X obj 118 120 f;
+#X floatatom 121 153 5 0 0 0 - - - 0;
+#X obj 119 92 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 147 121 + 2;
+#X connect 0 0 1 0;
+#X connect 0 0 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 1;
+#X restore 46 506 pd respuesta 2a;
+#X text 54 373 2a);
+#X text 224 373 2b);
+#N canvas 131 143 450 300 respuesta 0;
+#X obj 38 130 f;
+#X floatatom 41 163 5 0 0 0 - - - 0;
+#X obj 39 102 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 67 131 +;
+#X msg 153 87 -1;
+#X msg 91 47 1;
+#X text 185 88 sentido opuesto;
+#X text 122 45 hacia la derecha --> (positivos);
+#X text 190 110 (negativos) <-- hacia la izquierda;
+#X connect 0 0 1 0;
+#X connect 0 0 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 1;
+#X connect 4 0 3 1;
+#X connect 5 0 3 1;
+#X restore 234 506 pd respuesta 2b;
+#X text 453 88 3) ver la ayuda de:;
+#N canvas 131 143 450 300 respuesta 0;
+#X obj 118 120 f;
+#X obj 119 92 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 166 134 + 1;
+#X floatatom 118 144 5 0 0 0 - - - 0;
+#X obj 244 104 sel 11;
+#X msg 196 72 0;
+#X connect 0 0 2 0;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 0 1;
+#X restore 456 249 pd respuesta 3;
+#X text 453 382 ¿Cómo modificarías el patch original para que repita
+la serie 0 1 2 3?;
+#N canvas 131 143 450 300 respuesta 0;
+#X obj 118 120 f;
+#X obj 119 92 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 153 119 + 1;
+#X obj 118 154 mod 4;
+#X floatatom 118 178 5 0 0 0 - - - 0;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 3 0 2 0;
+#X connect 3 0 4 0;
+#X restore 454 506 pd respuesta 4;
+#X text 454 299 4) ver la ayuda de:;
+#X text 453 260 ________________________________________________________
+;
+#X text 455 515 ________________________________________________________
+;
+#X text 27 515 ________________________________________________________
+;
+#X text 33 260 ________________________________________________________
+;
+#X text 454 329 "mod" es la operación "módulo" \, que devuelve el
+resto de la división entera del primer numero por el segundo. Por
+ejemplo: 7 mod 4 = 3, f 50;

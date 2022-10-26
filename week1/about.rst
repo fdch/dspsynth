@@ -2,7 +2,7 @@
 About the class
 ===============
 
-`week1 <../week1>`_ - `prev <../week1/why_pd.html>`_ - `next <../week1/sinusoids.html>`_
+`week1 <.>`_ - `prev <../week1/why_pd.html>`_ - `next <../week1/sinusoids.html>`_
 
 Throughout the semester we will learn about audio signals.
 

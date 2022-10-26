@@ -2,7 +2,7 @@
 Inlets and Outlets
 ==================
 
-`week1 <../week1>`_ - `prev <../week1/using_pd.html>`_ - `next <../week1/exercises.html>`_
+`week1 <.>`_ - `prev <../week1/using_pd.html>`_ - `next <../week1/exercises.html>`_
 
 Outlets and Inlets
 ------------------

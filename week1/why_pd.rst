@@ -2,7 +2,7 @@
 Why Pd?
 =======
 
-`week1 <../week1>`_ - `prev <../week1/downloading_pd.html>`_ - `next <../week1/about.html>`_
+`week1 <.>`_ - `prev <../week1/downloading_pd.html>`_ - `next <../week1/about.html>`_
 
 Everyone has their reasons, but:
 

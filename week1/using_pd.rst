@@ -2,7 +2,7 @@
 Using Pd
 ========
 
-`week1 <../week1>`_ - `prev <../week1/sinusoids.html>`_ - `next <../week1/iolets.html>`_
+`week1 <.>`_ - `prev <../week1/sinusoids.html>`_ - `next <../week1/iolets.html>`_
 
 The Pd console
 --------------

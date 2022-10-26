@@ -2,7 +2,7 @@
 Sample
 ======
 
-`week2 <.>`_ - `prev <digital_audio_signals.html>`_ - `next <sample.html>`_
+`week2 <.>`_ - `prev <digital_audio_signals.html>`_ - `next <exercises.html>`_
 
 An audio sample is a single measure of `Amplitude`_, with a certain `Resolution`_, that corresponds to a moment in time of an electrical signal representing sound.
 
@@ -41,11 +41,12 @@ For example, if a number has 2 bits, then the maximum number it can represent is
 ========= ================== ================= =======================
 bit depth max number         integer range     amplitude resolution
 ========= ================== ================= =======================
-4 bit     2^4 = 16           0 to 15,          ``-15...15``
-8 bit     2^8 = 256          0 to 255,         ``-255...255``
-16 bit    2^16 = 65536       0 to 65535,       ``-65535...65535``
-24 bit    2^24 = 16777216    0 to 2^24-1,      ``-2^24-1...2^24-1``
-32 bit    2^32 = 4294967296  0 to 2^32-1,      ``-2^32-1...2^32-1``
+2 bit     2^2 = 4            0 to 3,           ``-3 ... 3``
+4 bit     2^4 = 16           0 to 15,          ``-15 ... 15``
+8 bit     2^8 = 256          0 to 255,         ``-255 ... 255``
+16 bit    2^16 = 65536       0 to 65535,       ``-65535 ... 65535``
+24 bit    2^24 = 16777216    0 to 2^24-1,      ``-2^24-1 ... 2^24-1``
+32 bit    2^32 = 4294967296  0 to 2^32-1,      ``-2^32-1 ... 2^32-1``
 ========= ================== ================= =======================
 
 As you can see, if the bit depth is low, the binary number cannot be too high.

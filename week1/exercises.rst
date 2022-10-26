@@ -2,7 +2,7 @@
 Exercises
 =========
 
-`week1 <../week1>`_ - `prev <../week1/iolets.html>`_ - `syllabus <..../syllabus.html>`_
+`week1 <.>`_ - `prev <iolets.html>`_ - `syllabus <../syllabus.html>`_
 
 In the `exercises <exercises>`_ folder you will see several patches to practice.
 
