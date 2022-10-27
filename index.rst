@@ -1,6 +1,6 @@
-====================================
-Digital Signal Processing Techniques
-====================================
+==============
+DSP Techniques
+==============
 
 .. image:: ./images/dsptech.jpg
     :width: 100%
