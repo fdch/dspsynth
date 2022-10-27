@@ -30,7 +30,7 @@ If you do have experience with these languages, then the class should be informa
 Plus there's all that music stuff we do.
 During the term, if you are having serious problems, please come to talk to me so that I can work with you or adjust the syllabus to get things back on-track.
 
-The ultimate objective is to create a digital musical instrument based on a design taken from an analog synthesizer such as: MiniMoog, Apollo1, Volca Bass, etc.
+The ultimate objective is for you to create a sonic experience using Pure Data and the techniques viewed in class. This can be an instrument, an installation, a sound art piece, a generative work, an interactive experience, and the list goes on.
 
 Bibliography
 ============
